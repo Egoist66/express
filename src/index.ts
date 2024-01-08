@@ -1,5 +1,6 @@
 import express from 'express'
 import compression from 'compression'
+import cors from 'cors'
 import {Data} from "./types/types";
 import {HTTP_STATUSES} from './utils/http-statuses'
 
@@ -17,6 +18,8 @@ const PORT = 3000
 
 const jsonBodyMiddleware = express.json()
 app.use(jsonBodyMiddleware, compression())
+app.use(cors())
+
 
 
 const data = {

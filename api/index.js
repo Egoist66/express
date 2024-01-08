@@ -6,12 +6,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.app = void 0;
 const express_1 = __importDefault(require("express"));
 const compression_1 = __importDefault(require("compression"));
+const cors_1 = __importDefault(require("cors"));
 const http_statuses_1 = require("./utils/http-statuses");
 const { OK, CONFLICT, CREATED, FORBIDDEN, INTERNAL_SERVER_ERROR, METHOD_NOT_ALLOWED, NO_CONTENT, NOT_FOUND, SERVICE_UNAVAILABLE, UNAUTHORIZED, BAD_REQUEST, ACCEPTED } = http_statuses_1.HTTP_STATUSES;
 exports.app = (0, express_1.default)();
 const PORT = 3000;
 const jsonBodyMiddleware = express_1.default.json();
 exports.app.use(jsonBodyMiddleware, (0, compression_1.default)());
+exports.app.use((0, cors_1.default)());
 const data = {
     messages: [],
     statusCode: 0,
