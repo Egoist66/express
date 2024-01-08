@@ -12,7 +12,7 @@ const {
 } = HTTP_STATUSES
 
 
-const app = express()
+export const app = express()
 const PORT = 3000
 
 const jsonBodyMiddleware = express.json()

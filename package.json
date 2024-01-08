@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon dist/index.js",
+    "start": "nodemon api/index.js",
     "compile": "tsc -w",
-    "debug": "nodemon --inspect dist/index.js"
+    "debug": "nodemon --inspect api/index.js"
   },
   "keywords": [],
   "author": "",
